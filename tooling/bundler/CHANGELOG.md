@@ -1,5 +1,19 @@
 # Changelog
 
+## \[1.6.1]
+
+### New Features
+
+- [`0aa0378c8`](https://www.github.com/tauri-apps/tauri/commit/0aa0378c8d632ce186ddd5df8b4bddd8853ceeaf) ([#10199](https://www.github.com/tauri-apps/tauri/pull/10199) by [@FabianLars](https://www.github.com/tauri-apps/tauri/../../FabianLars)) Added a configuration option to disable hardened runtime on macOS codesign.
+
+### Bug Fixes
+
+- [`1c2ff8133`](https://www.github.com/tauri-apps/tauri/commit/1c2ff81335332870556a7a30c25e0dca8c076448) ([#10183](https://www.github.com/tauri-apps/tauri/pull/10183) by [@amrbashir](https://www.github.com/tauri-apps/tauri/../../amrbashir)) Fix NSIS installer failing to launch apps that contain spaces after installation.
+
+### Dependencies
+
+- Upgraded to `tauri-utils@1.6.1`
+
 ## \[1.6.0]
 
 ### New Features

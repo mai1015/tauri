@@ -1,5 +1,18 @@
 # Changelog
 
+## \[1.7.2]
+
+### Bug Fixes
+
+- [`220bf92ed`](https://www.github.com/tauri-apps/tauri/commit/220bf92ed876c32fbc0b7e8d09b5292e3ffe526c) ([#9413](https://www.github.com/tauri-apps/tauri/pull/9413) by [@amrbashir](https://www.github.com/tauri-apps/tauri/../../amrbashir)) Fix NSIS updater creating new shortcuts on update.
+
+### Dependencies
+
+- Upgraded to `tauri-utils@1.6.1`
+- Upgraded to `tauri-runtime@0.14.5`
+- Upgraded to `tauri-runtime-wry@0.14.10`
+- Upgraded to `tauri-macros@1.4.6`
+
 ## \[1.7.1]
 
 ### Bug Fixes

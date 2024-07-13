@@ -1,5 +1,15 @@
 # Changelog
 
+## \[1.6.1]
+
+### New Features
+
+- [`0aa0378c8`](https://www.github.com/tauri-apps/tauri/commit/0aa0378c8d632ce186ddd5df8b4bddd8853ceeaf) ([#10199](https://www.github.com/tauri-apps/tauri/pull/10199) by [@FabianLars](https://www.github.com/tauri-apps/tauri/../../FabianLars)) Added a configuration option to disable hardened runtime on macOS codesign.
+
+### Enhancements
+
+- [`220bf92ed`](https://www.github.com/tauri-apps/tauri/commit/220bf92ed876c32fbc0b7e8d09b5292e3ffe526c) ([#9413](https://www.github.com/tauri-apps/tauri/pull/9413) by [@amrbashir](https://www.github.com/tauri-apps/tauri/../../amrbashir)) Added `/NS` flag in the return of `WindowsUpdateInstallMode::nsis_args`.
+
 ## \[1.6.0]
 
 ### New Features
