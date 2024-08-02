@@ -122,6 +122,16 @@ use global_shortcut::*;
 
 #[cfg(feature = "clipboard")]
 mod clipboard;
+#[cfg(any(
+  windows,
+  target_os = "linux",
+  target_os = "dragonfly",
+  target_os = "freebsd",
+  target_os = "netbsd",
+  target_os = "openbsd"
+))]
+mod undecorated_resizing;
+
 #[cfg(feature = "clipboard")]
 use clipboard::*;
 
@@ -2570,7 +2580,16 @@ fn handle_user_message<T: UserEvent>(
             WindowMessage::Close => {
               panic!("cannot handle `WindowMessage::Close` on the main thread")
             }
-            WindowMessage::SetDecorations(decorations) => window.set_decorations(decorations),
+            WindowMessage::SetDecorations(decorations) => {
+              window.set_decorations(decorations);
+
+              #[cfg(windows)]
+              if decorations {
+                undecorated_resizing::detach_resize_handler(window.hwnd() as isize);
+              } else {
+                undecorated_resizing::attach_resize_handler(window.hwnd() as isize);
+              }
+            },
             WindowMessage::SetAlwaysOnTop(always_on_top) => window.set_always_on_top(always_on_top),
             WindowMessage::SetContentProtected(protected) => {
               window.set_content_protection(protected)
